@@ -10,14 +10,22 @@ namespace SncMusic
 {
     public static class Banco
     {
-        public static MySqlCommand Abrir()
-        {
-            MySqlConnection cn = new MySqlConnection(Properties.Settings.Default.StrConn);
-            cn.Open();
-            MySqlCommand comm = new MySqlCommand();
-            comm.Connection = cn;
-            return comm;
+        
+            static MySqlConnection cn;
+            public static MySqlCommand Abrir()
+            {
+                cn = new MySqlConnection(Properties.Settings.Default.StrConn);
+                cn.Open();
+                MySqlCommand comm = new MySqlCommand();
+                comm.Connection = cn;
+                return comm;
+            }
+            public static void Fechar()
+            {
+                // se o estado da conexão for igual a aberto entao fechar conexão
+                if (cn.State == System.Data.ConnectionState.Open)
+                    // nao e nescessario utilizar chaves em estruturas caso tenha apenas um comando
+                    cn.Close();
+            }
         }
-    }
-
 }
