@@ -27,5 +27,5 @@ namespace SncMusic
                     // nao e nescessario utilizar chaves em estruturas caso tenha apenas um comando
                     cn.Close();
             }
-        }
+    }
 }
