@@ -17,3 +17,10 @@ C:\Users\wellington.vsantos4\source\repos\SncMusic\SncMusic\bin\Debug\MySql.Data
 C:\Users\wellington.vsantos4\source\repos\SncMusic\SncMusic\bin\Debug\Renci.SshNet.xml
 C:\Users\wellington.vsantos4\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.FrmAluno.resources
 C:\Users\wellington.vsantos4\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.csproj.CopyComplete
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.csprojAssemblyReference.cache
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.FrmAluno.resources
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.FrmPrincipal.resources
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.Properties.Resources.resources
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.csproj.GenerateResource.cache
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.exe
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.pdb
