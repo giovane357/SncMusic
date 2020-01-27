@@ -24,3 +24,15 @@ C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.Pro
 C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.csproj.GenerateResource.cache
 C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.exe
 C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.pdb
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\SncMusic.exe.config
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\SncMusic.exe
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\SncMusic.pdb
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\Google.Protobuf.dll
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\MySql.Data.dll
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\Renci.SshNet.dll
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\Google.Protobuf.xml
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\MySql.Data.xml
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\Renci.SshNet.xml
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.csproj.CopyComplete
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.frmProfessor.resources

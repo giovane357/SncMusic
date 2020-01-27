@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +46,9 @@
             this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnListe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNome
@@ -205,11 +209,37 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(587, 41);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(164, 212);
+            this.listBox1.TabIndex = 18;
+            // 
+            // btnListe
+            // 
+            this.btnListe.Location = new System.Drawing.Point(587, 272);
+            this.btnListe.Name = "btnListe";
+            this.btnListe.Size = new System.Drawing.Size(75, 23);
+            this.btnListe.TabIndex = 19;
+            this.btnListe.Text = "Liste";
+            this.btnListe.UseVisualStyleBackColor = true;
+            this.btnListe.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnListe);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.mskCPF);
@@ -253,5 +283,8 @@
         private System.Windows.Forms.MaskedTextBox mskCPF;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnListe;
     }
 }

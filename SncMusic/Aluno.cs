@@ -43,24 +43,41 @@ namespace SncMusic
             Telefone = _telefone;
             Email = _email;
         }
+        public Aluno(int _Id, string _nome, string _sexo,string _telefone)
+        {
+            Nome = _nome;
+            Sexo = _sexo;
+            Telefone = _telefone;
+            Id = _Id;
+        }
         //métodos da classe
         public void Inserir()
         {
-            MySqlCommand comm = Banco.Abrir();
-            comm.CommandText = "insert into tb_aluno values (0,@nome,@cpf,@sexo,@email,@telefone,default)";
-            comm.Parameters.Add("@nome",MySqlDbType.VarChar).Value=Nome;
-            comm.Parameters.Add("@cpf", MySqlDbType.VarChar).Value = Cpf;
-            comm.Parameters.Add("@sexo", MySqlDbType.VarChar).Value = Sexo;
-            comm.Parameters.Add("@email", MySqlDbType.VarChar).Value = Email;
-            comm.Parameters.Add("@telefone", MySqlDbType.VarChar).Value = Telefone;
-            comm.ExecuteNonQuery();
-            comm.CommandText = "select @@identity";
-            Id = Convert.ToInt32(comm.ExecuteScalar());
-            comm.Connection.Close();
+
         }
+        
         public bool Alterar(Aluno aluno)
         {
-            return true;
+            try
+                //bloco de tratamento de excessão
+            {
+                var comm = Banco.Abrir();
+                comm.CommandText = "update tb_aluno set nome_aluno = @nome,sexo_aluno =@sexo";
+                comm.Parameters.Add("@nome", MySqlDbType.VarChar).Value =aluno.Nome;
+                comm.Parameters.Add("@sexo", MySqlDbType.VarChar).Value = aluno.Sexo;
+                comm.Parameters.Add("@telefone", MySqlDbType.VarChar).Value = aluno.Telefone;
+                comm.Parameters.Add("@Id", MySqlDbType.Int32).Value = aluno.Id;
+                comm.ExecuteNonQuery();
+
+                Banco.Fechar();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
         public void ConsultarPorId(int _id)
         {
@@ -93,11 +110,7 @@ namespace SncMusic
                     dr.GetString(2),dr.GetString(3),
                     dr.GetString(4),dr.GetString(5),
                      Convert.ToDateTime(dr.GetValue(6))));
-
-
-
-
-
+                                                                
                 //Aluno aluno = new Aluno();
                 //aluno.Id = dr.dr.GetInt32(0);
                 //aluno.Nome = dr.dr.GetString(1);
@@ -110,6 +123,7 @@ namespace SncMusic
 
 
             }
+
             Banco.Fechar();
             return ListarAluno;
         }

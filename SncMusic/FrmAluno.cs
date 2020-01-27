@@ -57,7 +57,7 @@ namespace SncMusic
                 {
 
                     Aluno aluno = new Aluno();
-                    aluno.ConsultarPorId(Convert.ToInt32(txt.Text));
+                    aluno.ConsultarPorId(Convert.ToInt32(txtId.Text));
                     txtEmail.Text = aluno.Email;
                     mskCPF.Text = aluno.Cpf;
                     mskTelefone.Text = aluno.Telefone;
@@ -76,7 +76,7 @@ namespace SncMusic
 
                 
             }
-
+             
         }
 
         private void txtId_TextChanged(object sender, EventArgs e)
@@ -97,13 +97,11 @@ namespace SncMusic
             if (rdbMasculino.Checked) sexo = "M";
             else sexo = "F";// resolve o sexo
             mskTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            var comm = Banco.Abrir();
-            comm.CommandText = "update tb_aluno set nome_aluno = '"+txtNome.Text+"'," +
-                " sexo_aluno = '"+sexo+ "', telefone_aluno = '"+mskTelefone.Text +
-                "' where id_aluno = "+txtId.Text;
-            comm.ExecuteNonQuery();
-            comm.Connection.Close();
-            MessageBox.Show("Dados do aluno alterados com sucesso!");
+            Aluno aluno = new Aluno();
+            if (aluno.Alterar(new Aluno(Convert.ToInt32(txtId.Text), txtNome.Text, sexo, mskTelefone.Text)))
+                MessageBox.Show("Dados do aluno alterados com sucesso!");
+            else
+                MessageBox.Show("Falha ao alterar o aluno!");
             LimparControles();
         }
 
@@ -135,6 +133,16 @@ namespace SncMusic
             rdbMasculino.Checked = false;
             txtNome.Focus();
         }
-        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Aluno aluno = new Aluno();
+            var lista = aluno.ListarTodos();
+            foreach(var item in lista)
+            {
+                listBox1.Items.Add(item.Nome);
+            }
+
+        }
     }
 }
