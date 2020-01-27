@@ -36,3 +36,4 @@ C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\MySql.Data.x
 C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\Renci.SshNet.xml
 C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.csproj.CopyComplete
 C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.frmProfessor.resources
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.FrmCurso.resources
