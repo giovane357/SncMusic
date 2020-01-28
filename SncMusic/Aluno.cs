@@ -97,35 +97,14 @@ namespace SncMusic
             }
             Banco.Fechar();
         }
-        public List<Aluno> ListarTodos()
+        public MySqlDataReader ListarTodos( string caracter)
         {
             List<Aluno> ListarAluno = new List<Aluno>();
             var comm = Banco.Abrir();
-            comm.CommandText = "select * from tb_aluno ";
+            comm.CommandText = "select * from tb_aluno where nome_aluno like '%"+caracter+"%'";
             var dr = comm.ExecuteReader();
-            while (dr.Read())
-            {
-                ListarAluno.Add(new Aluno(dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetString(2),dr.GetString(3),
-                    dr.GetString(4),dr.GetString(5),
-                     Convert.ToDateTime(dr.GetValue(6))));
-                                                                
-                //Aluno aluno = new Aluno();
-                //aluno.Id = dr.dr.GetInt32(0);
-                //aluno.Nome = dr.dr.GetString(1);
-                //aluno.Email = dr.GetString (4);
-                //aluno.Cpf =  dr.GetString (2);
-                //aluno.Sexo = dr.GetString (3);
-                //aluno.Telefone =  dr.GetString(5);
-                //aluno.DataCadastro =  Convert.ToDateTime(dr.GetValue(6);
-                //ListarAluno.Add(aluno);
-
-
-            }
-
-            Banco.Fechar();
-            return ListarAluno;
+                 
+           return dr;
         }
 
     }
