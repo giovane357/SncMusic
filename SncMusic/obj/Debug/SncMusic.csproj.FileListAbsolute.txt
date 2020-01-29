@@ -37,3 +37,5 @@ C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\bin\Debug\Renci.SshNet
 C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.csproj.CopyComplete
 C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.frmProfessor.resources
 C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.FrmCurso.resources
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.FrmMatricula.resources
+C:\Users\giovane.rssantos1\source\repos\SncMusic\SncMusic\obj\Debug\SncMusic.FrmUsuario.resources

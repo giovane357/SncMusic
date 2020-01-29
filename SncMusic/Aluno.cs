@@ -97,6 +97,26 @@ namespace SncMusic
             }
             Banco.Fechar();
         }
+        public List<Aluno> ListarTodos()
+        {
+            List<Aluno> listaAluno = new List<Aluno>();
+            var comm = Banco.Abrir();
+            comm.CommandText = "select * from tb_aluno order by 2 ";
+            var dr = comm.ExecuteReader();
+            while (dr.Read())
+            {
+                listaAluno.Add(new Aluno(dr.GetInt32(0),
+                    dr.GetString(1),
+                     dr.GetString(2), dr.GetString(3),
+                     dr.GetString(4),
+                     dr.GetString(5),
+                     Convert.ToDateTime(dr.GetValue(6))));
+                                               
+            }
+            Banco.Fechar();
+
+            return listaAluno;
+        }
         public MySqlDataReader ListarTodos( string caracter)
         {
             List<Aluno> ListarAluno = new List<Aluno>();
