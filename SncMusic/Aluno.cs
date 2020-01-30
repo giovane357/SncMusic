@@ -53,7 +53,7 @@ namespace SncMusic
         //métodos da classe
         public void Inserir()
         {
-
+           
         }
         
         public bool Alterar(Aluno aluno)
